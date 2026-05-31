@@ -193,24 +193,27 @@ async def serve_demo_form():
                 background: rgba(255, 255, 255, 0.9);
                 backdrop-filter: blur(10px);
                 border-bottom: 1px solid rgba(197, 168, 128, 0.15);
-                padding: 15px 40px;
+                padding: 20px 40px;
                 position: sticky;
                 top: 0;
                 z-index: 100;
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
+                gap: 15px;
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
             }
             
             .brand-logo {
-                font-family: 'Outfit', 'Assistant', sans-serif;
-                font-size: 22px;
-                letter-spacing: 3px;
-                font-weight: 300;
-                text-transform: uppercase;
+                font-family: 'Assistant', sans-serif;
+                font-size: 24px;
+                letter-spacing: 1px;
+                font-weight: 600;
                 color: var(--primary);
                 cursor: pointer;
+                white-space: nowrap;
+                text-align: center;
             }
             
             .brand-logo span {
@@ -950,7 +953,7 @@ async def serve_demo_form():
         
         <!-- HEADER -->
         <header>
-            <div class="brand-logo" onclick="switchTab('client')">OMER PAZ NIR <span>STUDIO</span></div>
+            <div class="brand-logo" onclick="switchTab('client')">עומר פז ניר | תכנון ועיצוב פנים</div>
             <div class="nav-tabs">
                 <div class="nav-tab active" id="tab-client" onclick="switchTab('client')">אפיון פרויקט</div>
                 <div class="nav-tab" id="tab-admin" onclick="switchTab('admin')">מערכת CRM</div>
